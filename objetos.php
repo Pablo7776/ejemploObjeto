@@ -1,3 +1,11 @@
+<html>
+    <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body style="justify-content: center;">
+
+<h1 class="bg-primary" style="text-align: center;">Orientación a objetos:</h1>    
 <?php
 class Electronicos{
     private $Nombre;
@@ -89,44 +97,39 @@ public function __construct($Nombre, $Detalle, $Precio, $Peso, $Tamaño, $tamañ
 
 }
 
+ $electronicos1=new Electronicos("camara reflex", "Nikon d40", 20000, 350, "Medio");
+ $celulares1=new Celulares("", "Motorola g5", 15000, "120", "Medio", 6.4, "4 nucleos", "4");
 
 
-
-
-
-
-
-
-
-
-$electronicos1=new Electronicos("camara reflex", "Sistema Reflex", 40000, "350 gramos", "Medio");
-echo "<h3>".$electronicos1->getNombre()."</h3>";
-echo "</br>";          
-echo $electronicos1->getDetalle();
-echo "</br>";
-echo $electronicos1->getPrecio();
-echo "</br>";
-echo $electronicos1->getPeso();
-echo "</br>";
-echo $electronicos1->getTamaño();
-echo "</br>";
-
-
-$celulares1=new Celulares("", "bbb", 333, "345", "Medio", "nnn", "ddd", "sss");
-echo "<h3>".$celulares1->getNombre()."</h3>";
-echo "</br>";          
-echo $celulares1->getDetalle();
-echo "</br>";
-echo $celulares1->getPrecio();
-echo "</br>";
-echo $celulares1->getPeso();
-echo "</br>";
-echo $celulares1->getTamaño();
-echo "</br>";
-echo $celulares1->gettamañoPantalla();
-echo "</br>";
-echo $celulares1->getProcesador();
-echo "</br>";
-echo $celulares1->getMemoria();
-echo "</br>";
 ?>
+
+<div style="justify-content: center;  display: flex;">
+<div style="width: 300px;">
+
+<ul class="list-group">
+  <li class="list-group-item active" aria-current="true"><?php echo "".$electronicos1->getNombre();?></li>
+  <li class="list-group-item">Detalle: <?php echo $electronicos1->getDetalle();?></li>
+  <li class="list-group-item">Precio: $<?php echo $electronicos1->getPrecio();?></li>
+  <li class="list-group-item">Peso: <?php echo $electronicos1->getPeso();?> gramos</li>
+  <li class="list-group-item">Tamaño: <?php echo $electronicos1->getTamaño();?></li>
+</ul>
+
+<ul class="list-group">
+  <li class="list-group-item active" aria-current="true"><?php echo $celulares1->getNombre();?></li>
+  <li class="list-group-item">Detalle: <?php echo $celulares1->getDetalle();?></li>
+  <li class="list-group-item">Precio: <?php echo $celulares1->getPrecio();?></li>
+  <li class="list-group-item">Peso: <?php echo $celulares1->getPeso();?> g.</li>
+  <li class="list-group-item">Tamaño: <?php echo $celulares1->getTamaño();?></li>
+  <li class="list-group-item">Tamaño de pantalla: <?php echo $celulares1->gettamañoPantalla();?> pulgadas</li>
+  <li class="list-group-item">Procesador: <?php echo $celulares1->getProcesador();?></li>
+  <li class="list-group-item">Memoria: <?php echo $celulares1->getMemoria();?> Gigabytes</li>
+</ul>
+
+</div>
+</div>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>
